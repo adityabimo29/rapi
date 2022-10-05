@@ -1,0 +1,297 @@
+/**
+* Template Name: Bimodev
+* Author: Aditya Bimo Prayogo
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+    --color-first: #F8EDE3;
+    --color-second: #DFD3C3;
+    --color-third: #D0B8A8;
+    --color-fourth: #7D6E83;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.button-second {
+  background-color: var(--color-second);
+  border: 1px solid var(--color-second);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: var(--color-fourth);
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-second:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-second {
+    padding: 10px 30px;
+  }
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+nav {
+    background-color: var(--color-third);
+}
+
+ol,
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+dl,
+ol,
+ul {
+    margin: 0;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 15px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 0%);
+}
+
+.main-navigation a,
+.main-navigation i {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-navigation li {
+    display: inline-block;
+    padding: 26px 0;
+    cursor: pointer;
+    position: relative;
+    margin: 0 15px;
+}
+
+.main-navigation ul li:hover ul.submenu {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+.menu {
+    position: relative;
+}
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 666;
+    min-width: 190px;
+    font-size: 14px;
+    word-spacing: 1px;
+    color: #dadde2;
+    background-color: var(--color-fourth);
+    padding-bottom: 10px;
+    padding-top: 5px;
+    top: 76px;
+}
+
+.main-navigation .menu li .submenu li {
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.main-navigation .submenu li a {
+    display: flex;
+    align-items: center
+}
+
+.main-navigation .submenu li a i {
+    margin-right: 3px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-navigation .toggle-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .menu {
+        top: 0;
+        right: 0;
+        display: none;
+        transform: translateX(100%);
+    }
+
+    .main-navigation {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .icon-toggle {
+        font-size: 30px;
+    }
+
+    .toggle-bar{
+        cursor:pointer
+    }
+
+    .menu.show {
+        top: 65px;
+        right: 0;
+        display: flex;
+        transform: none;
+        background: var(--color-fourth);
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        animation: fadeIn 1s;
+        z-index:666;
+    }
+    .main-navigation li {
+        padding: 15px 0;
+    }
+    .main-navigation ul li:hover ul.submenu {
+        position: initial;
+    }
+
+    .submenu {
+        color: #dadde2;
+        background-color: var(--color-third);
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+   
+}
+
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+.cd-table-container{
+    background: #fff;
+    box-shadow: 1px 2px 26px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  /* Table Design */
+  .cd-table{
+    width: 100%;
+    color: #666;
+    margin: 10px auto;
+    border-collapse: collapse;
+  }
+  
+  .cd-table tr,
+  .cd-table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .cd-table th{
+    background: var(--color-second);
+    color: var(--color-fourth);
+    padding: 10px;
+  }
+  
+  /* Search Box */
+  .cd-search{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Search Title */
+  .cd-title{
+    color: #666;
+    margin: 15px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 2px solid #ccc;
+    }
+  }
