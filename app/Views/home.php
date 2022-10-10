@@ -35,7 +35,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="button-second" role="button">Add Data</button>
+                    <a href="form" class="button-second mt-1" role="button">Add Data</a>
+                    
                 </div>
             </div>
         </div>

@@ -8,6 +8,6 @@ class MonsterSizesModel extends Model
 {
     protected $table            = 'monster_sizes';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['id','size_title'];
+    protected $allowedFields    = ['size_title'];
 
 }

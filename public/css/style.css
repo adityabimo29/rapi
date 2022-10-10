@@ -46,6 +46,13 @@ body {
   transform: translateY(-2px);
 }
 
+.mt-1{
+  margin-top: 1rem;
+}
+.mb-1{
+  margin-bottom:1rem;
+}
+
 @media (min-width: 768px) {
   .button-second {
     padding: 10px 30px;
@@ -117,13 +124,24 @@ ul {
     padding-top: 5px;
     top: 76px;
 }
-
+.main-navigation  .menu li:hover a {
+  border-bottom: 2px solid var(--color-first);
+}
+.main-navigation  .menu li:hover .submenu li a {
+  border-bottom: transparent;
+}
 .main-navigation .menu li .submenu li {
     display: block;
     padding: 5px 10px;
     margin: 0;
 }
-
+.main-navigation .menu li .submenu li:hover {
+  background: var(--color-second);
+}
+.main-navigation .menu li .submenu li:hover a, .main-navigation .menu li .submenu li:hover i{
+  color: var(--color-fourth);
+  border-bottom: transparent;
+}
 .main-navigation .submenu li a {
     display: flex;
     align-items: center

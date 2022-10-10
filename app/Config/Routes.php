@@ -37,7 +37,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
+$routes->get('/form', 'Home::form');
 
+$routes->match(['get', 'post'], 'monster-sizes', 'Home::create');
+$routes->match(['get', 'post'], 'update/(:segment)', 'Home::update/$1');
 $routes->get('/api/monster-size/all', 'ApiController::monsterSize');
 
 /*
