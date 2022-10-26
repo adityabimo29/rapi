@@ -7,10 +7,10 @@
 # General
 --------------------------------------------------------------*/
 :root {
-    --color-first: #F8EDE3;
-    --color-second: #DFD3C3;
-    --color-third: #D0B8A8;
-    --color-fourth: #7D6E83;
+    --color-first: #F0FBFF;
+    --color-second: #ACDCEE;
+    --color-third: #2E94B9;
+    --color-fourth: #475053;
 }
 
 body {
@@ -76,7 +76,14 @@ ol,
 ul {
     margin: 0;
 }
-
+.logo-nav{
+  height: 40px;
+  margin-right: 10px;
+}
+.wrap-logo-nav span{
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
 .main-navigation {
     display: flex;
     justify-content: space-around;

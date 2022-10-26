@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="<?= base_url('icon.png') ?>">
     <title>Bimodev</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,11 +23,12 @@
 
     <!-- ======= Navigation ======= -->
     <nav class="main-navigation">
-        <a href="">
-            <img src="https://cakephp.org/img/cake-logo.svg" alt="">
+        <a href="" class="d-flex justify-content-center align-items-center wrap-logo-nav">
+            <img src="<?= base_url('logo.png') ?>" class="logo-nav" alt="">
+            <span>Bimodev.</span>
         </a>
         <div class="toggle-bar">
-            <span class="icon-toggle"><i class='bx bx-menu' ></i></span>
+            <span class="icon-toggle"><i class='bx bx-menu'></i></span>
         </div>
         <ul class="menu">
             <li>
@@ -70,16 +72,16 @@
     <script>
         // Show Navigation on Mobile
         let navMobile = document.querySelector(".toggle-bar");
-        navMobile.addEventListener("click",() => {
-            let menu        = document.querySelector(".menu");
-            let iconToggle  = document.querySelector(".icon-toggle");
-            let icon        = iconToggle.firstElementChild;
+        navMobile.addEventListener("click", () => {
+            let menu = document.querySelector(".menu");
+            let iconToggle = document.querySelector(".icon-toggle");
+            let icon = iconToggle.firstElementChild;
 
             if (icon.classList.contains('bx-menu')) {
                 icon.classList.remove('bx-menu');
                 menu.classList.add("show");
                 icon.classList.add('bx-x');
-            }else{
+            } else {
                 icon.classList.remove('bx-x');
                 menu.classList.remove("show");
                 icon.classList.add('bx-menu');
